@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    display: none; /* Ocultar el chatbot por defecto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-chat {
+    cursor: pointer;
+}
+
+.chat-messages {
+    height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.message {
+    margin-bottom: 10px;
+    clear: both;
+    overflow: hidden;
+}
+
+.message.user .avatar {
+    float: right;
+    margin-left: 10px;
+}
+
+.message.bot .avatar {
+    float: left;
+    margin-right: 10px;
+}
+
+.message .content {
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 70%;
+}
+
+.message.user .content {
+    background-color: #007BFF;
+    color: white;
+    float: right;
+}
+
+.message.bot .content {
+    background-color: #f2f2f2;
+    color: #333;
+    float: left;
+}
+
+.message .avatar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.chat-input button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+    background-color: #0056b3;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.floating-button:hover {
+    background-color: #0056b3;
+}
