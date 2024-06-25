@@ -318,8 +318,6 @@ function toggleTheme() {
 }
 
 let chatbotVisible = false;
-const userIconUrl = "{% static 'assets/js/user_icon.png' %}";
-const botIconUrl = "{% static 'assets/js/bot_icon.png' %}";
 
 function toggleChatbot() {
     const chatContainer = document.getElementById('chatContainer');
@@ -352,7 +350,7 @@ function appendMessage(sender, message) {
 
     const avatar = document.createElement('div');
     avatar.classList.add('avatar');
-    avatar.innerHTML = sender === 'user' ? '<img src="' + userIconUrl + '">' : '<img src="' + botIconUrl + '">';
+    avatar.innerHTML = sender === 'user' ? '<img src="/static/assets/js/user_icon.png">' : '<img src="/static/assets/js/bot_icon.png">';
     messageElement.appendChild(avatar);
 
     const content = document.createElement('div');
