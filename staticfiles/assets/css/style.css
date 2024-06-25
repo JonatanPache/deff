@@ -8204,7 +8204,7 @@ body {
   display: none; /* Ocultar el chatbot por defecto */
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px; /* Ajustar a la izquierda en lugar de la derecha */
   width: 300px;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -8212,7 +8212,6 @@ body {
   border-radius: 8px;
   overflow: hidden;
 }
-
 .chat-header {
   background-color: #007BFF;
   color: white;
@@ -8306,7 +8305,7 @@ body {
 .floating-button {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px; /* Ajustar a la izquierda en lugar de la derecha */
   width: 50px;
   height: 50px;
   background-color: #007BFF;
@@ -8321,6 +8320,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
+
 
 .floating-button:hover {
   background-color: #0056b3;
