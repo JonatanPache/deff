@@ -350,7 +350,7 @@ function appendMessage(sender, message) {
 
     const avatar = document.createElement('div');
     avatar.classList.add('avatar');
-    avatar.innerHTML = sender === 'user' ? '<img src="user-icon.png">' : '<img src="bot-icon.png">';
+    avatar.innerHTML = sender === 'user' ? '<img src="/static/assets/js/user_icon.png">' : '<img src="/static/assets/js/bot_icon.png">';
     messageElement.appendChild(avatar);
 
     const content = document.createElement('div');

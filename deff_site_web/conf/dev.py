@@ -7,8 +7,11 @@ load_dotenv()
 DEBUG=os.environ.get("DEBUG")
 PRODUCTION=os.environ.get("PRODUCTION")
 SECRET_KEY=os.environ.get("SECRET_KEY")
-ALLOWED_HOSTS=['deff.onrender.com']
+ALLOWED_HOSTS=['deff.onrender.com','*']
 
+
+RECAPTCHA_SITE_KEY=os.environ.get("RECAPTCHA_SITE_KEY")
+RECAPTCHA_SECRET_KEY=os.environ.get("RECAPTCHA_SECRET_KEY")
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -36,3 +39,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
     os.path.join(BASE_DIR,'media')
 ]
+
+SILENCED_SYSTEM_CHECKS = ['django_recaptcha.recaptcha_test_key_error']

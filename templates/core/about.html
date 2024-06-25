@@ -1,0 +1,235 @@
+{% extends "base/base.html" %} {% load static %} {% block content %}
+
+<!-- Inner Banner Area -->
+<div class="inner-banner">
+  <div class="container">
+    <div class="inner-title text-center">
+      <h3>Acerca de nosotros</h3>
+      <ul>
+        <li>
+          <a href="{% url 'core:home' %}">Home</a>
+        </li>
+        <li>
+          <i class="bx bx-chevron-right"></i>
+        </li>
+        <li>Acerca</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="inner-banner-shape">
+    <div class="shape-one">
+      <img src="{% static 'assets/img/inner-banner/banner-shape1.png' %}" alt="Images" />
+    </div>
+
+    <div class="shape-two">
+      <img src="{% static 'assets/img/inner-banner/banner-shape2.png' %}" alt="Images" />
+    </div>
+
+    <div class="shape-three">
+      <img src="{% static 'assets/img/inner-banner/banner-shape3.png' %}" alt="Images" />
+    </div>
+
+    <div class="inner-banner-dots">
+      <img src="{% static 'assets/img/shape/dots-shape.png' %}" alt="Images" />
+    </div>
+  </div>
+</div>
+<!-- Inner Banner Area End -->
+
+<!-- About Widget Area -->
+<div class="about-widget-area pt-50 pb-70">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="about-widget-img">
+          <img src="{% static 'assets/img/about/about-img4.png' %}" alt="" />
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="about-widget-content">
+            <div class="section-title">
+                <span class="sp-before sp-after">Acerca de Nosotros</span>
+                <h2>Impulsa Tu Negocio Con Nuestra Agencia</h2>
+            </div>
+            <h3>Somos {{ company_name }}, una startup con más de {{ experience_years }} años de experiencia combinada.</h3>
+            <p>{{ description }}</p>
+          
+
+            <div class="about-widget-list">
+                <ul>
+                    {% for item in about_items %}
+                    <li>
+                        <i class="{{ item.icon }}"></i>
+                        <span>{{ item.number }}</span>
+                        <p>{{ item.text }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+          <div class="about-video">
+            <a
+              href="https://www.youtube.com/watch?v=9aBsOsGRBzY"
+              class="video-btn popup-btn"
+            >
+              <i class="flaticon-forward"></i>
+              <span> Ver video de nuestro producto </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About Widget Area End -->
+
+<!-- Service List Area -->
+<div class="service-list-area pt-100 pb-70">
+  <div class="container">
+    <div class="section-title text-center">
+      <span class="sp-before sp-after">Services</span>
+      <h2>Nuestro Camino</h2>
+    </div>
+
+    <div class="row pt-45">
+        <div class="col-lg-4 col-md-6">
+            <div class="service-list-content">
+              <h3>Nuestra Misión</h3>
+              <p>
+                En DEFF, nuestra misión es proporcionar soluciones fintech innovadoras y efectivas, utilizando machine learning para potenciar nuestros servicios.
+              </p>
+              <ul>
+                {% for item in mission_items %}
+                <li>
+                  <i class="bx bx-check"></i>
+                  {{ item }}
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6">
+            <div class="service-list-content">
+              <h3>Quiénes Somos</h3>
+              <p>
+                Somos una startup dedicada a mejorar los servicios fintech mediante el uso de tecnologías avanzadas y estrategias innovadoras.
+              </p>
+              <ul>
+                {% for item in who_we_are_items %}
+                <li>
+                  <i class="bx bx-check"></i>
+                  {{ item }}
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+            <div class="service-list-content">
+              <h3>Nuestra Historia</h3>
+              <p>
+                DEFF ha recorrido un largo camino, evolucionando constantemente para mantenerse a la vanguardia de la industria fintech.
+              </p>
+              <ul>
+                {% for item in history_items %}
+                <li>
+                  <i class="bx bx-check"></i>
+                  {{ item }}
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+
+    </div>
+  </div>
+</div>
+<!-- Service List Area End -->
+
+<!-- Work Area Two -->
+{% comment %} <div class="work-area-two pt-100 pb-70">
+  <div class="container">
+    <div class="section-title text-center">
+      <span class="sp-before sp-after">Working Process</span>
+      <h2 class="h2-color2">Simple & Clean Work Process</h2>
+    </div>
+
+    <div class="row pt-45">
+      <div class="col-lg-4">
+        <div class="work-item-list">
+          <ul>
+            <li class="text-right">
+              <h3>Frame the Problem <span>1</span></h3>
+              <p>
+                Lorem ipsum dolor sit amet, aut odiut podit afugitsed quia
+                consequuntur
+              </p>
+            </li>
+
+            <li class="text-right">
+              <h3>Collect the Raw Data <span>2</span></h3>
+              <p>
+                Lorem ipsum dolor sit amet, aut odiut podit afugitsed quia
+                consequuntur
+              </p>
+            </li>
+
+            <li class="text-right">
+              <h3>Process the Data <span>3</span></h3>
+              <p>
+                Lorem ipsum dolor sit amet, aut odiut podit afugitsed quia
+                consequuntur
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="work-img-2">
+          <img src="{% static 'assets/img/work-img.png' %}" alt="Images" />
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="work-item-list-2">
+          <ul>
+            <li>
+              <h3><span>4</span>Explore the Data</h3>
+              <p>
+                Lorem ipsum dolor sit amet, aut odiut podit afugitsed quia
+                consequuntur
+              </p>
+            </li>
+
+            <li>
+              <h3><span>5</span>Perform Analysis</h3>
+              <p>
+                Lorem ipsum dolor sit amet, aut odiut podit afugitsed quia
+                consequuntur
+              </p>
+            </li>
+
+            <li>
+              <h3><span>6</span>Communicate Results</h3>
+              <p>
+                Lorem ipsum dolor sit amet, aut odiut podit afugitsed quia
+                consequuntur
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> {% endcomment %}
+<!-- Work Area Two End -->
+{% endblock %}

@@ -3,54 +3,10 @@
 <!-- Banner Area -->
 <div class="banner-area">
   <div class="container-fluid">
-    <div class="container-max-2">
-      <div class="col-lg-7">
+    <div class="container-max-1">
+      <div class="col-lg-8">
         <div class="banner-content">
-          <h1>Transformando<b> datos en decisiones inteligentes </b></h1>
-
-          <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <input type="file" id="formFile" name="picture" style="display: none;" onchange="this.form.submit()">
-            <div class="banner-btn">
-              <a href="#" class="get-btn" onclick="document.getElementById('formFile').click()">
-                  Subir Imagen
-                  <i class="bx bx-plus"></i>
-              </a>
-              <a href="#" class="call-btn" type="submit" onclick="document.getElementById('formFile').form.submit();">
-                  <i class="flaticon-loupe"></i>
-                  Extraer
-              </a>
-          </div>
-          </form>
-
-          <!-- Mostrar la imagen original -->
-          {% if pmodel.picture %}
-          <div class="image-container">
-            <h2>Imagen Original</h2>
-            <img src="{{ pmodel.picture.url }}" alt="Imagen Original">
-          </div>
-          {% endif %}
-
-          <!-- Mostrar la imagen procesada -->
-          {% if pmodel.pictureOutput %}
-          <div class="image-container">
-            <h2>Imagen Procesada</h2>
-            <img src="{{ pmodel.pictureOutput.url }}" alt="Imagen Procesada">
-          </div>
-          {% endif %}
-
-          <!-- Mostrar el texto OCR si está disponible -->
-          {% if ocr %}
-          <div class="ease-out bg-white text-slate-800 rounded-2xl hover:shadow-lg p-6 mt-3 duration-300 w-auto">
-            <p id="ocrtext" class="text-lg mt-2 mb-8 text-center">
-              {{ ocr }}
-            </p>
-            <button id="copybtn" onclick="copy()" class="button">
-              Copiar Texto
-              <i class="fi fi-rr-duplicate"></i>
-            </button>
-          </div>
-          {% endif %}
+          <h1>DEFF SOFTWARE<b> Impulsamos tu éxito </b></h1>
         </div>
       </div>
     </div>
@@ -80,22 +36,5 @@
 </div>
 
 <!-- Banner Area End -->
-
-<div id="chatContainer" class="chat-container">
-  <div id="chatHeader" class="chat-header">
-      Chatbot
-      <span id="closeChat" class="close-chat" onclick="toggleChatbot()">&times;</span>
-  </div>
-  <div id="chatMessages" class="chat-messages">
-      <!-- Aquí se mostrarán los mensajes del chatbot y del usuario -->
-  </div>
-  <div class="chat-input">
-      <input type="text" id="userInput" placeholder="Escribe tu mensaje..." onkeydown="handleKeyDown(event)">
-      <button onclick="sendMessage()">Enviar</button>
-  </div>
-</div>
-<div id="floatingButton" class="floating-button" onclick="toggleChatbot()">
-  <span>&#9998;</span>
-</div>
 
 {% endblock %}

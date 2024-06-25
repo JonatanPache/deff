@@ -1,0 +1,315 @@
+{% extends "base/base.html" %} {% load static %} {% block content %}
+
+<!-- Inner Banner Area -->
+<div class="inner-banner">
+  <div class="container">
+    <div class="inner-title text-center">
+      <h3>PharmSyn App</h3>
+      <ul>
+        <li>
+          <a href="{% url 'core:home' %}">Home</a>
+        </li>
+        <li>
+          <i class="bx bx-chevron-right"></i>
+        </li>
+        <li>Caso de Estudios Detalles</li>
+        <li>
+          <i class="bx bx-chevron-right"></i>
+        </li>
+        <li>Machine Learning en la Industria Farmaceutica</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="inner-banner-shape">
+    <div class="shape-one">
+      <img
+        src=" {% static 'assets/img/inner-banner/banner-shape1.png' %}"
+        alt="Images"
+      />
+    </div>
+
+    <div class="shape-two">
+      <img
+        src=" {% static 'assets/img/inner-banner/banner-shape2.png' %}"
+        alt="Images"
+      />
+    </div>
+
+    <div class="shape-three">
+      <img
+        src=" {% static 'assets/img/inner-banner/banner-shape3.png' %}"
+        alt="Images"
+      />
+    </div>
+
+    <div class="inner-banner-dots-2">
+      <img src=" {% static 'assets/img/shape/dots-shape.png' %}" alt="Images" />
+    </div>
+  </div>
+</div>
+<!-- Inner Banner Area End -->
+
+<!-- Case Studies Widget -->
+<div class="case-studies-widget pt-50">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="case-studies-content">
+          <div class="images-top">
+            <img
+              src=" {% static 'assets/img/case-studies/Cover.jpg' %}"
+              alt="Images"
+              class="img-responsive"
+            />
+          </div>
+
+          <span>Machine Learning, Segementacion & Prediccion</span>
+          <h2>
+            Nuestras soluciones datos ayudan a que tu negocio crezca e impulse al exito
+          </h2>
+          <p>
+            Descubre cómo Pharmsyn ha transformado el sector farmacéutico con
+            nuestras soluciones avanzadas.
+          </p>
+          <div class="content-widget-area">
+            <div class="row align-items-center">
+              <div class="col-lg-7">
+                <div class="content-widget-img">
+                  <img
+                    src=" {% static 'assets/img/case-studies/case-studies-details2.png' %}"
+                    alt="Images"
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-5">
+                <div class="content-widget-text">
+                  <h2>
+                    La solución completa para los especialistas en analistas de
+                    datos
+                  </h2>
+                  <p>
+                    Descubre cómo Pharmsyn ha revolucionado la gestión de recomendaciones de medicamentos
+                    en la industria farmacéutica.
+                  </p>
+                  <ul>
+                    <li>
+                      <i class="bx bx-check"></i>
+                      El campo de la ciencia de datos
+                    </li>
+                    <li>
+                      <i class="bx bx-check"></i>
+                      Pharmsyn está diseñado de manera única alrededor del algoritmo
+                      de Prediccion
+                    </li>
+                    <li>
+                      <i class="bx bx-check"></i>
+                      Implementación de tecnologías avanzadas
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2>Detalles del proyecto</h2>
+          <p>
+            Pharmsyn ha liderado el camino en la implementación de soluciones
+            innovadoras en la gestión de datos farmacéuticos.
+          </p>
+          <h2>Cronología de los resultados</h2>
+          <p>
+            Pharmsyn ha entregado resultados significativos en un período de
+            tiempo sorprendentemente corto.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="contact-widget">
+          <h2>Información de Contacto</h2>
+          <ul>
+            <li>
+              <i class="flaticon-telephone"></i>
+              <div class="content">
+                <h3>Propietario del Proyecto:</h3>
+                <span>DEFF Software</span>
+              </div>
+            </li>
+            <li>
+              <i class="flaticon-tick"></i>
+              <div class="content">
+                <h3>Completado</h3>
+                <span>24 de Junio de 2024</span>
+              </div>
+            </li>
+            <li>
+              <i class="flaticon-planet-earth"></i>
+              <div class="content">
+                <h3>Ubicación:</h3>
+                <span>Santa Cruz de la Sierra, Bolivia</span>
+              </div>
+            </li>
+            <li>
+              <i class="flaticon-price-tag"></i>
+              <div class="content">
+                <h3>Tecnologías:</h3>
+                <span>Ciencia de Datos, Machine Learning, AWS, SageMaker</span>
+              </div>
+            </li>
+            {% comment %} <li>
+              <i class="flaticon-planet-earth"></i>
+              <div class="content">
+                <h3>Sitio Web:</h3>
+                <span><a href="#">pharmsyn.com</a></span>
+              </div>
+            </li> {% endcomment %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Case Studies Widget End -->
+{% comment %} 
+<!-- Blog Area -->
+<div class="blog-area-widget pb-70">
+  <div class="container">
+    <div class="title">
+      <h2>Related Projects You May Like</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+          <a href="#">
+            <img src=" {% static 'assets/img/blog/blog1.png' %}" alt="Images" />
+          </a>
+          <div class="content">
+            <h3>
+              <a href="#" class="color-title">
+                The Home of Technology is in Front of You
+              </a>
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+          <a href="#">
+            <img src=" {% static 'assets/img/blog/blog2.png' %}" alt="Images" />
+          </a>
+
+          <div class="content">
+            <h3>
+              <a href="#" class="color-title">
+                SEO Best Practices Mobile Friendliness
+              </a>
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+        <div class="blog-card">
+          <a href="#">
+            <img src=" {% static 'assets/img/blog/blog3.png' %}" alt="Images" />
+          </a>
+          <div class="content">
+            <h3>
+              <a href="#" class="color-title">
+                15 SEO Practices Website Architecture
+              </a>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Blog Area End -->
+
+<!-- Brand Logo Area -->
+<div class="brand-logo-area pt-100">
+  <div class="container-fluid">
+    <div class="container-max">
+      <div class="brand-logo-slider owl-carousel owl-theme">
+        <div class="brand-logo-item">
+          <img
+            src=" {% static 'assets/img/brand/brand-logo1.png' %}"
+            class="brand-logo1"
+            alt="Images"
+          />
+          <img
+            src=" {% static 'assets/img/brand/brand-style1.png' %}"
+            class="brand-logo2"
+            alt="Images"
+          />
+        </div>
+        <div class="brand-logo-item">
+          <img
+            src=" {% static 'assets/img/brand/brand-logo2.png' %}"
+            class="brand-logo1"
+            alt="Images"
+          />
+          <img
+            src=" {% static 'assets/img/brand/brand-style2.png' %}"
+            class="brand-logo2"
+            alt="Images"
+          />
+        </div>
+        <div class="brand-logo-item">
+          <img
+            src=" {% static 'assets/img/brand/brand-logo3.png' %}"
+            class="brand-logo1"
+            alt="Images"
+          />
+          <img
+            src=" {% static 'assets/img/brand/brand-style3.png' %}"
+            class="brand-logo2"
+            alt="Images"
+          />
+        </div>
+        <div class="brand-logo-item">
+          <img
+            src=" {% static 'assets/img/brand/brand-logo4.png' %}"
+            class="brand-logo1"
+            alt="Images"
+          />
+          <img
+            src=" {% static 'assets/img/brand/brand-style4.png' %}"
+            class="brand-logo2"
+            alt="Images"
+          />
+        </div>
+        <div class="brand-logo-item">
+          <img
+            src=" {% static 'assets/img/brand/brand-logo5.png' %}"
+            class="brand-logo1"
+            alt="Images"
+          />
+          <img
+            src=" {% static 'assets/img/brand/brand-style5.png' %}"
+            class="brand-logo2"
+            alt="Images"
+          />
+        </div>
+        <div class="brand-logo-item">
+          <img
+            src=" {% static 'assets/img/brand/brand-logo6.png' %}"
+            class="brand-logo1"
+            alt="Images"
+          />
+          <img
+            src=" {% static 'assets/img/brand/brand-style6.png' %}"
+            class="brand-logo2"
+            alt="Images"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Brand Logo Area End --> {% endcomment %}
+
+{% endblock %}

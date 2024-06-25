@@ -37,6 +37,9 @@
     <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
     <!-- Theme Dark CSS -->
     <link rel="stylesheet" href="{% static 'assets/css/theme-dark.css' %}" />
+      <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf1NwAqAAAAAMVOXAjHHcT1U3VwZw1OeaEQbKdy"></script>
+
+
 
     <title>Deff Software</title>
 
@@ -88,13 +91,13 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="{% url 'core:home' %}" class="nav-link active">
                                 Home 
                                 <i class='bx bx-plus'></i>
                             </a>
-                            <ul class="dropdown-menu">
+                            {% comment %} <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="index.html" class="nav-link active">
+                                    <a href="{% url 'core:home' %}" class="nav-link active">
                                         Deff Software
                                     </a>
                                 </li>
@@ -108,11 +111,11 @@
                                         Machine Learning
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> {% endcomment %}
                         </li>
                         <li class="nav-item">
-                            <a href="about.html" class="nav-link">
-                                About
+                            <a href="{% url 'core:about' %}" class="nav-link">
+                                Acerca
                             </a>
                         </li>
                         <li class="nav-item">
@@ -122,7 +125,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="services.html" class="nav-link">
+                                    <a href="{% url 'core:case_studies' %}" class="nav-link">
                                         Pharmsyn 
                                     </a>
                                 </li>
@@ -136,7 +139,7 @@
 
                         
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link">
+                            <a href="{% url 'core:contact' %}" class="nav-link">
                                 Contact
                             </a>
                         </li>
@@ -149,7 +152,7 @@
                             </div>
                         </div>
 
-                        <div class="side-item">
+                        {% comment %} <div class="side-item">
                             <div class="user-btn">
                                 <a href="#">
                                     <i class="flaticon-contact"></i>
@@ -164,7 +167,7 @@
                                     <i class='bx bx-plus'></i>
                                 </a>
                             </div>
-                        </div>
+                        </div> {% endcomment %}
                     </div>
                 </div>
             </nav>
@@ -252,16 +255,37 @@
         <div class="copy-right-area">
           <div class="copy-right-text text-center">
             <p>
-              Copyright @
+              Copyright @DEFF
               <script>
                 document.write(new Date().getFullYear());
               </script>
-              Ingenieria Software 2. Proyecto Final Grupo Nro ..
+              Ingenieria Software 2. Proyecto Final. Desarrollado por Yonatan J. Condori Pacheco, Luis Barja Silva..
             </p>
           </div>
         </div>
       </div>
     </footer>
+
+
+
+
+<div id="chatContainer" class="chat-container">
+  <div id="chatHeader" class="chat-header">
+      Chatbot
+      <span id="closeChat" class="close-chat" onclick="toggleChatbot()">&times;</span>
+  </div>
+  <div id="chatMessages" class="chat-messages">
+      <!-- Aquí se mostrarán los mensajes del chatbot y del usuario -->
+  </div>
+  <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Escribe tu mensaje..." onkeydown="handleKeyDown(event)">
+      <button onclick="sendMessage()">Enviar</button>
+  </div>
+</div>
+<div id="floatingButton" class="floating-button" onclick="toggleChatbot()">
+  <span>&#9998;</span>
+</div>
+
 
     <!-- Jquery Min JS -->
     <script src="{% static 'assets/js/jquery.min.js' %}"></script>
@@ -283,5 +307,13 @@
     <script src="{% static 'assets/js/contact-form-script.js' %}"></script>
     <!-- Custom JS -->
     <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.enterprise.ready(async () => {
+          const token = await grecaptcha.enterprise.execute('6Lf1NwAqAAAAAMVOXAjHHcT1U3VwZw1OeaEQbKdy', {action: 'LOGIN'});
+        });
+      }
+    </script>
   </body>
 </html>
